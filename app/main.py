@@ -8,7 +8,7 @@ import torch
 
 # setup the webserver
 # port may need to be changed if there are multiple flask servers running on same server
-port = 12345
+port = 12352
 base_url = get_base_url(port)
 
 # if the base url is not empty, then the server is running in development, and we need to specify the static folder so that the static files are served
@@ -45,12 +45,13 @@ def home():
             return redirect(request.url)
 
         if file and allowed_file(file.filename):
+            print("Got file")
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             return redirect(url_for('uploaded_file',
                                     filename=filename))
 
-    return render_template('home.html')
+    return render_template('index_new.html')
 
 
 @app.route(f'{base_url}/uploads/<filename>')
@@ -87,12 +88,12 @@ def uploaded_file(filename):
         labels = set(labels)
         labels = [emotion.capitalize() for emotion in labels]
         labels = and_syntax(labels)
-        return render_template('results.html', confidences=format_confidences, labels=labels,
+        return render_template('results_new.html', confidences=format_confidences, labels=labels,
                                old_filename=filename,
                                filename=filename)
     else:
         found = False
-        return render_template('results.html', labels='No Emotion', old_filename=filename, filename=filename)
+        return render_template('results_new.html', labels='No Emotion', old_filename=filename, filename=filename)
 
 
 @app.route(f'{base_url}/uploads/<path:filename>')
@@ -107,7 +108,7 @@ def files(filename):
 
 if __name__ == '__main__':
     # IMPORTANT: change url to the site where you are editing this file.
-    website_url = 'url'
+    website_url = 'cocalc15.ai-camp.dev'
     
     print(f'Try to open\n\n    https://{website_url}' + base_url + '\n\n')
     app.run(host = '0.0.0.0', port=port, debug=True)
