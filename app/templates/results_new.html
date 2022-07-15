@@ -53,7 +53,7 @@
   margin-top: 23px;
 }
 .color_text {
-   color: black;
+  color: black;}
 </style>
 </head>
 
@@ -112,53 +112,36 @@
     </div>
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex justify-cntent-center align-items-center">
- <section id="msg-box4-2" data-rv-view="2" style="background-color: rgb(255, 255, 255); margin-top: 8rem; padding-top: 3rem; padding-bottom: 0rem;">
+  <!-- ======= Hero Section<pre></pre> ======= -->
+  <section id="hero" class="d-flex justify-cntent-center align-items-center" style="margin-bottom: 27px;padding-bottom: 310px;">
+ <section id="msg-box4-2" data-rv-view="2" style="background-color: rgb(255, 255, 255); margin-top: 8rem; padding-top: 3rem; padding-bottom: 0rem; margin-left:auto;margin-right:auto;">
             <div class="container">
         <div class="row">
-{#                <div class="col justify-content-center align-items-center text-center">#}
-{##}
-{##}
-{##}
-{#                    <a class="mb-0" id='seefood_button'>#}
-{#                        <form action="{{ url_for('home') }}" id='seefood_form' method=post enctype=multipart/form-data>#}
-{#                            <input id="seefood_input_field" name="file" type="file" onchange="this.form.submit();" hidden/>#}
-{#                        </form>#}
-{#                        <button href="#" target="_blank" class="btn btn-white btn-circled btn-results btn-text">#}
-{#                            <i class="fas fa-camera pr-2 left" aria-hidden="true"></i> Next Photo#}
-{#                        </button>#}
-{#                    </a>#}
-{#                </div>#}
-{#                <div class="col">#}
-{#                    <img class="mbr-figure" src="{{ url_for('static', filename='uploads/' + filename)}}">#}
-{#                </div>#}
+
          <section id="icon-boxes" class="icon-boxes">
       <div class="container">
 
-        <div class="column" style="margin-left:800px;">
-          <div class="col-md-12 col-xs-12 col-lg-12 d-flex align-items-stretch mb-8 mb-lg-4" data-aos="fade-up" >
+<!--         <div class="column"> -->
+          <div class="col-md-12 col-xs-12 col-lg-12 d-flex align-items-stretch mb-12 mb-lg-12" data-aos="fade-up" style="padding-bottom:150px;padding-top:290px">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-webcam"></i></div>
-              <h3 class="title"><a href="">Recognition Results</a></h3>
-            <h3 class="we-found btn-text display-4">We found <strong><span style='text-transform: capitalize;'>{{labels}}!</span></strong></h3>
+              <h6 class="title"><a href="">Recognition Results</a></h6>
+            <h6 class="we-found ">We found <strong><span style='text-transform: capitalize;'>{{labels}}!</span></strong></h6>
                     {% if labels == 'no emotion' %}
                     <div>We missed? See why below.</div>
                     {% else %}
-                    <div class="lead"><em>with {{ confidences }} confidence.</em></div>
+<!--                     <div class="lead we-found"><em>with {{ confidences }} confidence.</em></div> -->
                     {% endif %}
                 <img src="{{ url_for('static', filename='uploads/' + filename)}}" width="350" height="350">
               
                                   <a class="mb-0" id='seefood_button'>
                         <form action="{{ url_for('home') }}" id='seefood_form' method=post enctype=multipart/form-data>
                             <input id="seefood_input_field" name="file" type="file" onchange="this.form.submit();" hidden/>
+                                      <label class="btn-get-started animate__animated animate__fadeInUp" for="seefood_input_field" style="color:black;margin-left:100px">Try Next File</label>
                         </form>
-                        <button href="#" target="_blank" class="btn btn-white btn-circled btn-results btn-text">
-                            <i class="fas fa-camera pr-2 left" aria-hidden="true"></i> Next Photo
-                        </button>
                     </a>
 
-            </div>
+<!--             </div> -->
           </div>
 
         </div>
@@ -170,27 +153,6 @@
             </div>
     </section>
 
-{#          <section id="icon-boxes" class="icon-boxes">#}
-{#      <div class="container">#}
-{##}
-{#        <div class="row" style="margin-left:500px;">#}
-{#          <div class="col-md-12 col-xs-12 col-lg-12 d-flex align-items-stretch mb-8 mb-lg-4" data-aos="fade-up">#}
-{#            <div class="icon-box">#}
-{#              <div class="icon"><i class="bx bx-webcam"></i></div>#}
-{#              <h4 class="title"><a href="">Live Video</a></h4>#}
-{#                <img src="{{ "/video_feed" }}" width="400" height="300">#}
-{#                 <audio controls autoplay>#}
-{#                   <source src="{{ url_for('static', filename='sounds/a.wav') }}" type="audio/wav"/>#}
-{#                  </audio>#}
-{#              <p class="description">Upload image containing sign language to identify ASL alphabet.</p>#}
-{#            </div>#}
-{#          </div>#}
-{##}
-{#        </div>#}
-{##}
-{#      </div>#}
-{#      </div>#}
-{#    </section> <!-- End Icon Boxes Section -->#}
   </section><!-- End Hero -->
 
   <main id="main">
@@ -209,8 +171,9 @@
         </div>
         
         <section class="mbr-section mbr-section-nopadding" id="services-2" data-rv-view="5" style="padding-top: 60px; margin-top: 60px; padding-bottom: 60px">-->
-          <section id="about" class="about" data-rv-view="5" style="padding-top: 60px; margin-top: 60px; padding-bottom: 60px">
-            <div class="row" data-aos="fade-up">
+<!--     <section class="mbr-section mbr-section-nopadding" id="services-2" data-rv-view="5" style="padding-top: 60px; margin-top: 60px; padding-bottom: 60px">
+<!--           <section id="about" class="about" data-rv-view="5" style="padding-top: 60px; margin-top: 60px; padding-bottom: 60px"> -->
+<!--             <div class="row" data-aos="fade-up">
                 <div class="col-sm-12 col-lg-6 text-center">
                     <h3 class="section-title display-4 results-title">Reason for Errors</h3>
 
@@ -222,26 +185,20 @@
                 <div class="col-sm-12 col-lg-6">
                     <img class="mbr-figure-graph" src="{{ url_for('static', filename='assets/img/confusion_matrix.jpg') }}">
                 </div>
-            </div>
-    </section>
+            </div> -->
+    </section> 
         
-        <section id="icon-boxes" class="icon-boxes">
+<!--         <section id="icon-boxes" class="icon-boxes">
       <div class="container">
 
         <div class="row">
-{#          <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">#}
-{#            <div class="icon-box">#}
-{#              <div class="icon"><i class="bx bx-receipt"></i></div>#}
-{#              <h4 class="title">Introduction</h4>#}
-{#              <p class="description">Our Project known as the ASL Translator, is able to recognize various ASL letters from the alphabet through machine learning, allowing us to translate its outputs into English.</p>#}
-{#            </div>#}
-{#          </div>#}
+
 
 
         </div>
 
       </div>
-    </section><!-- End Icon Boxes Section -->
+    </section><!-- End Icon Boxes Section --> 
     </div>
     </section><!-- End About Us Section -->
 
@@ -625,14 +582,14 @@ Palo Alto, CA 94304 <br><br>
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>Anyar</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>AI CAMP</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/anyar-free-multipurpose-one-page-bootstrap-theme/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Designed by <a href="https://bootstrapmade.com/">Pink Panthers</a>
       </div>
     </div>
   </footer><!-- End Footer -->
