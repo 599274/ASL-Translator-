@@ -5,7 +5,10 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Bootstrap Template - Index</title>
+  <title>Ultimate ASL Translator</title>
+  <link rel = "icon" href = 
+"https://clipground.com/images/peace-sign-hand-clipart-20.png" 
+        type = "image/x-icon">
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -49,6 +52,8 @@
   margin: 4px 10px;
   margin-top: 23px;
 }
+.color_text {
+   color: black;
 </style>
 </head>
 
@@ -62,10 +67,7 @@
           <a href= "https://www.ai-camp.org/">Homepage</a>
         </button>
         <img src="AICampLogo.png" alt="AICampLogo" style="width:50px;height:50px;"> 
-        <i class = "AICAMPLOGO"> <p style="font-size:160%;">
-        <strong>AI Camp</strong>
-          </p> </i>
-        <i class="AICAMPLOGO"></i>
+         
       </div>
       <div class="cta d-none d-md-block">
         <a href="#about" class="scrollto">Try Our Product</a>
@@ -76,15 +78,19 @@
   <header id="header" class="fixed-top d-flex align-items-center ">
     <div class="container d-flex align-items-center justify-content-between">
        <h1 class="logo"><a href="https://www.ai-camp.org" target="popup" onclick="window.open('https://www.ai-camp.org','popup','height=750,width=1300'); return false;" class="logo"><img src="{{ url_for('static', filename='images/ai-camp-logo-128x128.png')}}" class="img-fluid"></a></h1>
+      <div class="section-title">
+          <h3 class="animate__animated animate__fadeInDown">  </h3>
+      </div>
+  
 
 
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero" >Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto active" href="#hero"><span class="color_text">Home</span></a></li>
+          <li><a class="nav-link scrollto" href="#about"><span class="color_text">About</span></a></li>
+          <li><a class="nav-link scrollto" href="#team"><span class="color_text">Team</span></a></li>
+          <li><a class="nav-link scrollto" href="#contact"><span class="color_text">Contact</span></a></li>
 
          <!--<li><a class= "nav-link scrollto"
                  <a href="blog.html">Blog</a></li>
@@ -131,7 +137,7 @@
           <h2 class="animate__animated animate__fadeInDown">Live ASL Translator</h2>
           
           <p class="animate__animated animate__fadeInUp">Webcam object detection and typing</p>
-          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Try It!</a>
+          <a href="#" class="btn-get-started animate__animated animate__fadeInUp scrollto">Try It!</a>
         </div>
       </div>
 
@@ -172,9 +178,9 @@
 
           <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
             <div class="icon-box">
-              <div class="icon"><i class="bx bx-detail"></i></div>
-              <h4 class="title"><a href="">Typing</a></h4>
-              <p class="description">Live typing with ASL and webcam, ASL letter recognition and outputing. </p>
+              <div class="icon"><i class="bx bx-headphone"></i></div>
+              <h4 class="title"><a href="">Voice</a></h4>
+              <p class="description">Voice reads out signed letter in the live camera</p>
           </div>
 
         </div>
@@ -247,7 +253,7 @@
       <div class="container-fluid">
 
         <div class="row">
-          <div class="col-lg-5 align-items-stretch position-relative video-box" style="background-image: url({{ url_for('static', filename='assets/img/why-us.jpg') }});" data-aos="fade-right">
+          <div class="col-lg-5 align-items-stretch position-relative video-box" style="background-image: url({{ url_for('static', filename='assets/img/team-pink-panthers.jpg') }});background-size: contain;" data-aos="fade-right">
             <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn mb-4"></a>
           </div>
           <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch" data-aos="fade-left">
@@ -275,7 +281,7 @@
                   <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
                     <p>
                       Gathering the data is a step that is vital for a good algorithm. No matter how good the model you are training, if the data is faulty, none of the algoritms predictions are going to be good. Luckily for us, somebody else had already made a dataset with around 1,500 images, to which we added roughly 1,000 more of our own images. Using images that we took in front of our faces trained our model to distinguish between a face and a hand.
-                    <img src="{{ url_for('static', filename='images1/henry.jpg')}}" >
+                    <img src="{{ url_for('static', filename='images1/henry.jpeg')}}" >
                       
                       
 
@@ -292,8 +298,8 @@
                   </div>
                 </li>
  <li data-aos="fade-up" data-aos-delay="400">
-                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>04</span>Creating our website<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-4" class="collapsed"><span>04</span>Creating our website<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-4" class="collapse" data-bs-parent=".accordion-list">
                     <p>
                       Once we had a trained model with all of its features, we needed a website that showcased the AI and explained everything about it. We uploaded a template and dowloaded it CoCalc- a platform that allowed collaborative work on the site. We used HTML to edit the writing and put the information down. Then we made use of CSS for colors, speed, format, etc. The final product is exactly what you are reading! (how did we do?)
                     </p>
@@ -511,15 +517,19 @@
 
         <div class="row">
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-6 mt-4" data-aos="fade-up" data-aos-delay="100">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img src="https://www.techfunnel.com/wp-content/uploads/2017/12/7-Types-of-Hackers.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="https://bit.ly/3cjVPhy" width="1000"; height="10000"; class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Cullan </h4>
                 <span>Back-end developer</span>
-                <p> Just smile awkwardly and everything will be fine 
+                <p> I'm Cullan, an upcoming sophomore at Hopkinton High School. I like to play video games and learn new things. For this project, I helped work on the back end of the html, as well as the collection of data.
                 </p>
                 <div class="social">
+                    <div id="container"> 
+                  </div> 
+                  <script> 
+                  </script>
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
                   <a href=""><i class="ri-instagram-fill"></i></a>
@@ -531,11 +541,11 @@
 
           <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img src="{{ url_for('static', filename='assets/img/team/rock.jpg') }}" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ url_for('static', filename='assets/img/unnamed-1.jpg') }}" width="600"; height="1000"; class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Dasha Fry</h4>
                 <span>Front-end developer</span>
-                <p>my chin is rlly itchy</p>
+                <p>Howdy! I am an upcoming freshman at Bronx High School of Science in New York City. I worked on annotating the data, training the model, and coding the CSS of the website. I enjoy dancing and extending my duolingo streak.</p>
                 <div class="social">
                   <a href="https://www.instagram.com/dancerdasha/"><i class="ri-instagram-fill"></i></a>
                    <a href="https://t.snapchat.com/VycYEIho"><i class="ri-snapchat-fill"></i></a>
@@ -550,8 +560,8 @@
               <div class="pic"><img src="{{ url_for('static', filename='assets/img/team/Henry.jpg') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Henry Zhou</h4>
-                <span>Training Data</span>
-                <p>98% Human</p>
+                <span>Back-end developer</span>
+                <p>Hi, I'm Henry Zhou. I am currently a junior at Pine View school. I worked on creating and training our AI model, collecting data, and coding the back end of this website.</p>
                 <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
@@ -564,11 +574,11 @@
 
           <div class="col-lg-6 mt-4" data-aos="fade-up" data-aos-delay="400">
             <div class="member d-flex  align-items-start">
-              <div class=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy8ygno3Vcdr5GylkD719i4dM1ELK5eBkV7Q&usqp=CAU" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy8ygno3Vcdr5GylkD719i4dM1ELK5eBkV7Q&usqp=CAU" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Timothy West</h4>
                 <span>Front-end developer</span>
-                <p>Tuesdays are free if you bring a gnome costume (random sentence generator)</p>
+                <p>Hi, I'm Timothy west and I'm now a sophomore at Cy Springs High school. I helped with making the front end part of the website and with training our AI Model.  </p>
                 <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
@@ -586,7 +596,7 @@
               <div class="member-info">
                 <h4>Raphael Andreae</h4>
                 <span>Front-end developer</span>
-                <p>If you drink enough drugs before going to work, you will perform better. (caffiene)</p>
+                <p>Hello, I'm Raphael, a freshman at Rowland Hall. I worked mainly on front-end development and helped with data collection and labeling. </p>
                 <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
@@ -599,11 +609,11 @@
 
         <div class="col-lg-6 mt-4" data-aos="fade-up" data-aos-delay="600">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/team/team-3.jpg" class="" alt=""></div>
+              <div class="pic"><img src="{{ url_for('static', filename='assets/img/team/dogggy.jpg') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Roy</h4>
                 <span>Front-end developer</span>
-                <p>DESCRIPTION</p>
+                <p>Hi, I'm a rising sophomore at Saint Mary's High School. I like to watch Netflix.</p>
                 <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
@@ -615,11 +625,11 @@
           </div>
 <div class="col-lg-6 mt-4" data-aos="fade-up" data-aos-delay="700">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img src="https://i5.walmartimages.com/asr/9b8f2b05-d318-4ba2-ac5c-3979512865af.7bc7ccdaeca173706c19f12a249bc9e0.jpeg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ url_for('static', filename='assets/img/team/Prasanga.JPG') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Prasanga Neupane</h4>
                 <span>Team Leader</span>
-                <p>The GOAT</p>
+                <p>Hi, I am Prasanga, Lead Data Science Intern at AI Camp. My interest lies in use of machine learning to solve some real-world problems.</p>
                 <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
@@ -849,8 +859,7 @@ Palo Alto, CA 94304 <br><br>
             <h3></h3>
             <p></p>
             <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="https://www.youtube.com/channel/UCUGJzo5EwViLGpAgYphNyzg" class="facebook"><i class="bx bxl-youtube"></i></a>
               <a href="https://www.instagram.com/aicamp1/" class="instagram"><i class="bx bxl-instagram"></i></a>
             </div>
           </div>

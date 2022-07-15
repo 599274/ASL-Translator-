@@ -1,0 +1,28 @@
+Python 3.8.10 (default, Mar 15 2022, 12:22:08) 
+[GCC 9.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> [K>>> Screenshot.py
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'Screenshot' is not defined
+>>> pyu[Kthon  ASL Translator Website/ASL-Translator-/app/templates/Screenshot.py[C[C[C[C[C[C[C[1P
+  File "<stdin>", line 1
+    python ASL Translator Website/ASL-Translator-/app/templates/Screenshot.py
+           ^
+SyntaxError: invalid syntax
+>>> cd AL[KSL TRE[K[Kranslator
+  File "<stdin>", line 1
+    cd ASL Translator
+       ^
+SyntaxError: invalid syntax
+>>> cd ASL_Translt[Kator
+  File "<stdin>", line 1
+    cd ASL_Translator
+       ^
+SyntaxError: invalid syntax
+>>> cd ASL-Translator-
+  File "<stdin>", line 1
+    cd ASL-Translator-
+       ^
+SyntaxError: invalid syntax
+>>> 

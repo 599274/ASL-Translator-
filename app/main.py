@@ -45,7 +45,6 @@ def home():
             return redirect(request.url)
 
         if file and allowed_file(file.filename):
-            print("Got file")
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             return redirect(url_for('uploaded_file',
@@ -88,6 +87,8 @@ def uploaded_file(filename):
         labels = set(labels)
         labels = [emotion.capitalize() for emotion in labels]
         labels = and_syntax(labels)
+        print(labels)
+
         return render_template('results_new.html', confidences=format_confidences, labels=labels,
                                old_filename=filename,
                                filename=filename)
